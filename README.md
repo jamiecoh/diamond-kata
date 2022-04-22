@@ -8,3 +8,8 @@ Testing uses [FluentAssertions](https://fluentassertions.com/) as its a great li
 The `Diamond` class is static as it holds no state, and exposes its alphabet to aid with testing & validation.
 
 The console application exists only to demonstrate the functionality by printing the result to the console, it accepts one argument which must be an uppercase character in the range A-Z.
+
+Possible enhancements:
+
+ - I would really like to attempt a solution using `ReadOnlySpan<char>` as this is a string manipulation task, which can almost certainly be achieved with very few allocations.
+ - Allow lowercase characters, which would be pretty easy.

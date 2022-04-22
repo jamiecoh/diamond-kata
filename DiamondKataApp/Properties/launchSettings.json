@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DiamondKataApp": {
+      "commandName": "Project",
+      "commandLineArgs": "F"
+    }
+  }
+}

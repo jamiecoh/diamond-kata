@@ -1,12 +1,20 @@
 using Xunit;
 using FluentAssertions;
 using DiamondKataLib;
+using System;
 
 namespace DiamondKataTests
 {
     public class DiamondTests
     {
-        const string Alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        [Fact]
+        public void InvalidInputThrowsException()
+        {
+            Action act = () => Diamond.Create('a');
+
+            act.Should().Throw<ArgumentException>()
+                .WithMessage("Specified character is not supported. (Parameter 'to')");
+        }
 
         [Fact]
         public void DiamondAIsOnlyOneLineLong()
@@ -39,25 +47,28 @@ namespace DiamondKataTests
         }
 
         [Theory]
+        [InlineData('A')]
         [InlineData('B')]
         [InlineData('C')]
         [InlineData('D')]
-        [InlineData('E')]
-        public void AllRowsAreSameLength(char to)
+        [InlineData('Z')]
+        public void AllAreSameLengthAndHeight(char to)
         {
             var result = Diamond.Create(to);
 
+            result.Should().HaveCount(result[0].Length);
             result.Should().AllSatisfy(x => x.Should().HaveLength(result[0].Length));
         }
 
         [Theory]
+        [InlineData('A')]
         [InlineData('B')]
         [InlineData('C')]
         [InlineData('D')]
-        [InlineData('E')]
+        [InlineData('Z')]
         public void TopOfDiamondIsMirrored(char to)
         {
-            var pos = Alphabet.IndexOf(to);
+            var pos = Diamond.Alphabet.IndexOf(to);
             var result = Diamond.Create(to);
 
             for(var i = 0; i < pos; i++)

@@ -7,6 +7,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiamondKataLib", "DiamondKa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiamondKataTests", "DiamondKataTests\DiamondKataTests.csproj", "{A2F66FB4-ACBD-4450-959B-AB5633170D95}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{5CC6FBA0-2616-4BB3-BC28-C14AE2DEAF33}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiamondKataApp", "DiamondKataApp\DiamondKataApp.csproj", "{8426AE8F-6A38-4848-8788-F18E2663F413}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +29,10 @@ Global
 		{A2F66FB4-ACBD-4450-959B-AB5633170D95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2F66FB4-ACBD-4450-959B-AB5633170D95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2F66FB4-ACBD-4450-959B-AB5633170D95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8426AE8F-6A38-4848-8788-F18E2663F413}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8426AE8F-6A38-4848-8788-F18E2663F413}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8426AE8F-6A38-4848-8788-F18E2663F413}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8426AE8F-6A38-4848-8788-F18E2663F413}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
